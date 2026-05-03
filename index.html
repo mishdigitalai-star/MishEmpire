@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>MisH | Creator. Strategist. Builder.</title>
+
+<!-- SEO -->
+<meta name="description" content="Multi-hyphenate creator building at the intersection of AI, creativity, music and social impact. From animated content and digital products to social care leadership and a brand new music genre, Honey Soul. UK based Nigerian Excellence.">
+<meta name="keywords" content="MisH, MisH Empire, content creator, AI strategist, Honey Soul, social care, digital creator, Manchester">
+<meta name="author" content="MisH">
+
+<!-- Open Graph -->
+<meta property="og:title" content="MisH | Creator. Strategist. Builder.">
+<meta property="og:description" content="Multi-hyphenate creator building at the intersection of AI, creativity, music and social impact. From animated content and digital products to social care leadership and a brand new music genre, Honey Soul. UK based Nigerian Excellence.">
+<meta property="og:image" content="https://mishempire.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mishempire.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MisH | Creator. Strategist. Builder.">
+<meta name="twitter:description" content="Multi-hyphenate creator building at the intersection of AI, creativity, music and social impact. From animated content and digital products to social care leadership and a brand new music genre, Honey Soul. UK based Nigerian Excellence.">
+<meta name="twitter:image" content="https://mishempire.com/og-image.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://mishempire.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --magenta: #E040A0;
+    --magenta-light: #F472C8;
+    --magenta-bg: #FDF2F8;
+    --amber: #F5A623;
+    --amber-light: #FCD34D;
+    --amber-bg: #FFFBEB;
+    --lavender: #C084FC;
+    --lavender-bg: #FAF5FF;
+    --gold: #D4A017;
+    --bg: #FAFAF9;
+    --bg-card: #FFFFFF;
+    --bg-alt: #F5F5F4;
+    --text: #1A1A1A;
+    --text-secondary: #6B7280;
+    --text-tertiary: #9CA3AF;
+    --border: #E5E7EB;
+    --border-light: #F3F4F6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* ---- DARK MODE ---- */
+  [data-theme="dark"] {
+    --magenta-bg: #2D1525;
+    --amber-bg: #1A1508;
+    --lavender-bg: #1F1535;
+    --bg: #0D0A14;
+    --bg-card: #14101F;
+    --bg-alt: #1A1428;
+    --text: #F0ECF5;
+    --text-secondary: #A8A0B8;
+    --text-tertiary: #7A7290;
+    --border: #2A2435;
+    --border-light: #1E1A28;
+  }
+
+  [data-theme="dark"] .status-live { background: #0A1F15; color: #34D399; }
+  [data-theme="dark"] nav { background: rgba(13,10,20,0.85); }
+  [data-theme="dark"] .mobile-menu { background: rgba(13,10,20,0.98); }
+  [data-theme="dark"] .honey-card { background: linear-gradient(135deg, var(--amber-bg), var(--lavender-bg)); }
+  [data-theme="dark"] .btn-primary { background: var(--magenta); color: #fff; }
+  [data-theme="dark"] .btn-primary:hover { background: var(--magenta-light); }
+  [data-theme="dark"] .btn-outline { border-color: var(--border); color: var(--text); }
+  [data-theme="dark"] .venture-card:hover { box-shadow: 0 8px 30px rgba(224,64,160,0.12); }
+  [data-theme="dark"] .product-card:hover { box-shadow: 0 8px 30px rgba(192,132,252,0.12); }
+  [data-theme="dark"] .social-card:hover { box-shadow: 0 4px 20px rgba(224,64,160,0.1); }
+
+  /* ---- THEME TOGGLE ---- */
+  .theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle:hover { border-color: var(--magenta); }
+
+  /* ---- NAV ---- */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    background: rgba(250,250,249,0.85);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color: var(--text);
+  }
+
+  .nav-logo .logo-h {
+    background: linear-gradient(135deg, var(--magenta), var(--amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-center { display: flex; gap: 32px; }
+
+  .nav-center a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav-center a:hover { color: var(--text); }
+
+  .nav-cta {
+    padding: 10px 24px;
+    background: var(--text);
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .nav-cta:hover { background: var(--magenta); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ---- HAMBURGER ---- */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.active span:nth-child(2) { opacity: 0; }
+  .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(250,250,249,0.98);
+    z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    backdrop-filter: blur(20px);
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+
+  .mobile-menu a:hover { color: var(--magenta); }
+
+  /* ---- HERO ---- */
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-content { }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: var(--magenta-bg);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--magenta);
+    margin-bottom: 24px;
+  }
+
+  .hero-badge .dot {
+    width: 6px; height: 6px;
+    background: var(--magenta);
+    border-radius: 50%;
+    animation: blink 2s ease infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .hero-title .highlight {
+    background: linear-gradient(135deg, var(--magenta), var(--amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    margin-bottom: 36px;
+  }
+
+  .hero-stat-item { }
+
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--text);
+  }
+
+  .hero-stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    letter-spacing: 0.5px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-primary {
+    background: var(--text);
+    color: var(--bg);
+  }
+
+  .btn-primary:hover { background: var(--magenta); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .btn-outline:hover { border-color: var(--magenta); color: var(--magenta); }
+
+  .hero-photo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo img {
+    width: 320px;
+    height: 400px;
+    border-radius: 24px;
+    object-fit: cover;
+    object-position: center top;
+    border: 1px solid var(--border);
+  }
+
+  /* ---- SECTIONS ---- */
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--magenta);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 1.0rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--border-light);
+  }
+
+  /* ---- BY DAY ---- */
+  .byday-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 650px;
+    border-left: 4px solid var(--magenta);
+  }
+
+  .byday-card p {
+    font-size: 1.0rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .byday-meta {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item { display: flex; flex-direction: column; gap: 2px; }
+
+  .meta-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--magenta);
+  }
+
+  .meta-value {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  /* ---- VENTURE CARDS ---- */
+  .ventures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+  }
+
+  .venture-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .venture-card:hover {
+    border-color: var(--magenta);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(224,64,160,0.08);
+  }
+
+  .venture-card .v-platform {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .v-instagram { background: var(--magenta-bg); color: var(--magenta); }
+  .v-tiktok { background: var(--lavender-bg); color: var(--lavender); }
+
+  .venture-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .venture-card .v-handle {
+    font-size: 0.85rem;
+    color: var(--magenta);
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .venture-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .venture-card .v-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .venture-card .v-link:hover { color: var(--magenta); }
+
+  /* ---- HONEY SOUL ---- */
+  .honey-card {
+    background: linear-gradient(135deg, var(--amber-bg), var(--lavender-bg));
+    border: 1px solid rgba(212,160,23,0.15);
+    border-radius: 16px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .honey-card::after {
+    content: '\266B';
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    font-size: 7rem;
+    opacity: 0.06;
+    color: var(--gold);
+  }
+
+  .honey-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .honey-card .genre-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: 16px;
+  }
+
+  .honey-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 500px;
+  }
+
+  .pill-badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 5px 14px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 20px;
+  }
+
+  /* ---- THOUGHT LEADERSHIP ---- */
+  .thought-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .thought-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    border-left: 4px solid var(--lavender);
+  }
+
+  .thought-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .thought-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  .thought-card .status-pill {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 4px 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: var(--magenta-bg);
+    color: var(--magenta);
+  }
+
+  /* ---- PRODUCTS ---- */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .product-card:hover {
+    border-color: var(--lavender);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(192,132,252,0.08);
+  }
+
+  .product-card .p-emoji { font-size: 1.6rem; margin-bottom: 12px; }
+
+  .product-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .product-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+  }
+
+  .product-card .p-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .status-live { background: #ECFDF5; color: #059669; }
+  .status-building { background: var(--amber-bg); color: var(--amber); }
+  .status-soon { background: var(--lavender-bg); color: var(--lavender); }
+  .status-invite { background: var(--magenta-bg); color: var(--magenta); }
+
+  .product-card a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .product-card a:hover { color: var(--magenta); }
+
+  .live-dot {
+    width: 5px; height: 5px;
+    background: #059669;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 2s ease infinite;
+  }
+
+  /* ---- CONNECT ---- */
+  .connect {
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+  }
+
+  .social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 120px;
+  }
+
+  .social-card:hover {
+    border-color: var(--magenta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(224,64,160,0.06);
+  }
+
+  .social-card .sc-icon { width: 28px; height: 28px; margin-bottom: 4px; color: var(--magenta); flex-shrink: 0; }
+
+  .social-card .sc-count {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    letter-spacing: 0.5px;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* ---- SCROLL REVEAL ---- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-center { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 60px 20px; }
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 110px 20px 60px;
+      text-align: center;
+      gap: 40px;
+    }
+    .hero-content { order: 2; }
+    .hero-photo { order: 1; }
+    .hero-photo img { width: 220px; height: 280px; }
+    .hero-stats { justify-content: center; }
+    .hero-actions { justify-content: center; }
+    .hero-desc { margin-left: auto; margin-right: auto; }
+    .ventures-grid, .thought-grid, .products-grid { grid-template-columns: 1fr; }
+    .honey-card { padding: 32px 24px; }
+    .social-grid { gap: 10px; }
+    .social-card { min-width: 100px; padding: 16px 18px; }
+    .byday-meta { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Mis<span class="logo-h">H</span></div>
+  <div class="nav-center">
+    <a href="#about">About</a>
+    <a href="#byday">By Day</a>
+    <a href="#create">Create</a>
+    <a href="#music">Music</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#products">Products</a>
+  </div>
+  <div class="nav-right">
+    <a href="#connect" class="nav-cta">Let's Connect &rarr;</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" id="themeBtn">&#9790;</button>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#byday" onclick="toggleMenu()">By Day</a>
+  <a href="#create" onclick="toggleMenu()">Create</a>
+  <a href="#music" onclick="toggleMenu()">Music</a>
+  <a href="#leadership" onclick="toggleMenu()">Leadership</a>
+  <a href="#products" onclick="toggleMenu()">Products</a>
+  <a href="#connect" onclick="toggleMenu()">Connect</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Creator &middot; Strategist &middot; Builder</div>
+    <h1 class="hero-title">Hi, I'm <span class="highlight">MisH</span></h1>
+    <p class="hero-desc">Building at the intersection of AI, creativity, music and social impact. UK based Nigerian Excellence.</p>
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">31K+</div>
+        <div class="hero-stat-label">Followers</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">9</div>
+        <div class="hero-stat-label">Ventures</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-num">1.2M+</div>
+        <div class="hero-stat-label">Viral views</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#create" class="btn btn-primary">View My Work</a>
+      <a href="#connect" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="mishempireheadshot.png" alt="MisH">
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">About</div>
+    <div class="section-title">The Woman Behind MisH</div>
+    <div class="section-desc">
+      Multi-hyphenate creator, social care lead, and AI strategist, with deep roots in health and social care, and a restless drive to build things that matter.
+    </div>
+  </div>
+  <div class="reveal" style="font-size:0.95rem; line-height:1.8; color:var(--text-secondary); max-width:680px;">
+    <p style="margin-bottom:16px;">By day, I lead social work teams navigating complex cases. By night, I create AI-powered animated content that resurrects icons, reimagines history, and brings nostalgia to life for a growing community of 31K+ followers.</p>
+    <p style="margin-bottom:16px;">I'm the creator of <strong style="color:var(--text);">Honey Soul</strong>, an original music genre fusing Afrobeats groove with Motown soul. I'm building <strong style="color:var(--text);">ScribisH.ai</strong>, an AI notes platform for the care workforce. And I'm currently completing an <strong style="color:var(--text);">Executive MBA in AI</strong> with a health and social care specialism.</p>
+    <p style="margin-bottom:16px;">Former TV presenter and DJ in Nigeria. Former athlete. Always building.</p>
+    <p><strong style="color:var(--text);">BSc (Hons) Integrated Practice in Learning Disability Nursing and Social Work</strong>, First Class, University of Salford. Registered Social Worker and Registered Learning (Intellectual) Disability Nurse.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BY DAY -->
+<section id="byday">
+  <div class="reveal">
+    <div class="section-label">By Day</div>
+    <div class="section-title">Social Care Lead</div>
+  </div>
+  <div class="byday-card reveal">
+    <p>Leading and managing social workers on a day-to-day basis, navigating complexity, risks, safeguarding outcomes, and championing best practice across frontline social care teams.</p>
+    <div class="byday-meta">
+      <div class="meta-item">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Adult Social Care Lead</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Published</span>
+        <span class="meta-value">Co-author, Complexity Guidance</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Qualification</span>
+        <span class="meta-value">BSc (Hons) First Class, University of Salford</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Registered</span>
+        <span class="meta-value">Social Worker &amp; Learning Disability Nurse</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTENT CREATION -->
+<section id="create">
+  <div class="reveal">
+    <div class="section-label">Content Creation</div>
+    <div class="section-title">Imagine. Create. Build.</div>
+    <div class="section-desc">Using AI to bring historical, entertaining and nostalgic stories to life through animated content, resurrecting icons, reimagining childhood, and building worlds that never existed.</div>
+  </div>
+  <div class="ventures-grid">
+    <div class="venture-card reveal">
+      <span class="v-platform v-instagram">Instagram</span>
+      <h3>Flavoured</h3>
+      <span class="v-handle">@flavoured</span>
+      <p>AI-powered animated content, from the Heaven's Front Row celebrity resurrection series to nostalgic childhood tributes. Where imagination meets technology.</p>
+      <a href="https://www.instagram.com/flavoured?igsh=YXg1YjNiN2VnZGgy&utm_source=qr" target="_blank" class="v-link">Follow on Instagram &rarr;</a>
+    </div>
+    <div class="venture-card reveal">
+      <span class="v-platform v-tiktok">TikTok</span>
+      <h3>Mish.digitalcreator</h3>
+      <span class="v-handle">@Mish.digitalcreator</span>
+      <p>Short-form content, behind the scenes of the creative process, and the journey of building multiple ventures with AI at the core.</p>
+      <a href="https://www.tiktok.com/@mish.digitalcreator?_r=1&_t=ZN-9630Ow7P7Ac" target="_blank" class="v-link">Follow on TikTok &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HONEY SOUL -->
+<section id="music">
+  <div class="reveal">
+    <div class="section-label">Music</div>
+    <div class="section-title">A New Sound</div>
+  </div>
+  <div class="honey-card reveal">
+    <h3>Honey Soul</h3>
+    <div class="genre-tag">Afrobeats Groove &times; Motown Soul</div>
+    <p>An original genre born from the warmth of Motown's golden era and the rhythmic pulse of Afrobeats. Flagship track: <em>"Coming Home To Me."</em></p>
+    <div class="pill-badge">Genre in development</div>
+    <div style="margin-top:24px; max-width:400px;">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0PuQEwSQlGSq7H9j6qOfj4?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div style="margin-top:16px;">
+      <a href="https://open.spotify.com/track/0PuQEwSQlGSq7H9j6qOfj4?si=2ijScOqwRWO2SAp16IBI9w" target="_blank" class="btn btn-outline" style="font-size:0.8rem; padding:10px 22px;">Explore Honey Soul &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- THOUGHT LEADERSHIP -->
+<section id="leadership">
+  <div class="reveal">
+    <div class="section-label">Thought Leadership</div>
+    <div class="section-title">AI That Serves People</div>
+  </div>
+  <div class="thought-grid">
+    <div class="thought-card reveal">
+      <h3>Executive MBA in AI</h3>
+      <p>Specialising in health and social care, exploring how AI can predict and reduce risks, and transforming service delivery and workforce planning to achieve the best outcomes for the people who need it most.</p>
+      <span class="status-pill">In progress</span>
+    </div>
+    <div class="thought-card reveal">
+      <h3>Digital &amp; AI Strategic Leadership</h3>
+      <p>Helping businesses navigate digital transformation with practical, ethical, and results-driven AI strategy, grounded in real-world care sector expertise.</p>
+      <span class="status-pill">Consulting &amp; Advisory</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="reveal">
+    <div class="section-label">Digital Products</div>
+    <div class="section-title">Tools &amp; Platforms</div>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="p-emoji">&#128221;</div>
+      <h3>ScribisH.ai</h3>
+      <p>The AI notes platform built for the whole care workforce, nurses, social workers, and allied health professionals.</p>
+      <div class="p-status status-building"><span class="live-dot" style="background:var(--amber);"></span> Building now</div>
+      <a href="#">Learn more &rarr;</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#127793;</div>
+      <h3>Reset Space</h3>
+      <p>A low-pressure wellness app for those navigating burnout. Breathe, reset, recalibrate.</p>
+      <div class="p-status status-live"><span class="live-dot"></span> Live</div>
+      <a href="https://resetspace.netlify.app" target="_blank">Visit Reset Space &rarr;</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#128142;</div>
+      <h3>Elegant Ladies</h3>
+      <p>Curated lifestyle app for women who move through the world with intention and grace.</p>
+      <div class="p-status status-invite">By invitation only</div>
+      <a href="https://elegant-ladies.netlify.app" target="_blank">Request invite &rarr;</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#127800;</div>
+      <h3>NurturisH</h3>
+      <p>Menstrual wellness app.</p>
+      <div class="p-status status-soon">Coming soon</div>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#127912;</div>
+      <h3>RendarA</h3>
+      <p>AI-powered print-on-demand platform for creators who want to turn art into products.</p>
+      <div class="p-status status-soon">Coming soon</div>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#127891;</div>
+      <h3>AI Content Academy</h3>
+      <p>A living lab where I document real AI content creation, ideas, systems, experiments, failures, and wins, in real time.</p>
+      <div class="p-status status-building"><span class="live-dot" style="background:var(--amber);"></span> Waiting list open</div>
+      <a href="https://stan.store/MishDigital/p/a-living-laboratory-for-ai-content-" target="_blank">Join the waiting list &rarr;</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#127916;</div>
+      <h3>Viral Tribute Reel Blueprint</h3>
+      <p>Step-by-step guide to creating AI-powered memorial tribute reels that connect and go viral.</p>
+      <div class="p-status status-live"><span class="live-dot"></span> Live</div>
+      <a href="https://stan.store/MishDigital/p/the-viral-tribute-guide" target="_blank">Get the blueprint &rarr;</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="p-emoji">&#128640;</div>
+      <h3>More Products</h3>
+      <p>Browse all digital toolkits, templates, and resources on my Stan Store.</p>
+      <a href="https://stan.store/MishDigital" target="_blank">Browse all &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONNECT -->
+<section id="connect" class="connect">
+  <div class="reveal">
+    <div class="section-label">Connect</div>
+    <div class="section-title">Let's Build Something</div>
+    <p style="font-size:1.0rem; color:var(--text-secondary); margin-bottom:8px;">For collaborations, consulting, or just to say hello.</p>
+  </div>
+  <div class="social-grid reveal">
+    <a href="https://www.tiktok.com/@mish.digitalcreator?_r=1&_t=ZN-9630Ow7P7Ac" target="_blank" class="social-card">
+      <svg class="sc-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.18 8.18 0 0 0 4.76 1.52V6.84a4.83 4.83 0 0 1-1-.15z"/></svg>
+      TikTok
+      <span class="sc-count">24.5K followers</span>
+    </a>
+    <a href="https://www.instagram.com/flavoured?igsh=YXg1YjNiN2VnZGgy&utm_source=qr" target="_blank" class="social-card">
+      <svg class="sc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+      Instagram
+      <span class="sc-count">4K+ followers</span>
+    </a>
+    <a href="https://www.facebook.com/share/18U1wxLRpm/?mibextid=wwXIfr" target="_blank" class="social-card">
+      <svg class="sc-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+      <span class="sc-count">2K followers</span>
+    </a>
+    <a href="https://www.threads.com/@flavoured?igshid=NTc4MTIwNjQ2YQ==" target="_blank" class="social-card">
+      <svg class="sc-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.739.753c-1.07-3.846-3.83-5.532-7.568-5.553h-.01c-2.609.018-4.612.88-5.956 2.565-1.297 1.626-1.965 3.99-1.988 7.024v.017c.022 3.022.69 5.394 1.985 7.05 1.263 1.614 3.18 2.453 5.7 2.497l.045.001c2.058 0 3.673-.512 4.94-1.564 1.399-1.162 2.117-2.794 2.134-4.853.012-1.398-.393-2.504-1.205-3.287-.752-.726-1.776-1.14-2.974-1.207.089.466.134.94.134 1.418 0 .393-.034.784-.1 1.167.865.228 1.473.818 1.473 1.91-.012 1.265-.45 2.22-1.302 2.838-.78.567-1.79.855-3.003.855h-.03c-1.853-.013-3.268-.695-4.2-2.027-.87-1.243-1.313-2.975-1.319-5.148v-.025c.006-2.182.45-3.91 1.321-5.14.936-1.32 2.35-1.99 4.2-1.99h.026c1.898.013 3.328.716 4.25 2.09.474.706.81 1.553 1.003 2.526l.005.024c.183-.003.366.003.549.018 1.958.148 3.542.856 4.713 2.107 1.245 1.33 1.878 3.094 1.862 5.156-.022 2.725-1.01 4.946-2.938 6.607C18.13 23.14 15.463 24 12.186 24z"/></svg>
+      Threads
+      <span class="sc-count">1.4K followers</span>
+    </a>
+    <a href="mailto:hello@mishempire.com" class="social-card">
+      <svg class="sc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+      Email
+      <span class="sc-count">hello@mishempire.com</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 MisH Empire | Creator. Strategist. Builder. | UK Based Nigerian Excellence
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+  }
+
+  // Theme toggle
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('mish-theme', next);
+    updateToggleIcon(next);
+  }
+
+  function updateToggleIcon(theme) {
+    const btn = document.getElementById('themeBtn');
+    btn.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
+  }
+
+  // Load saved theme or default to light
+  (function() {
+    const saved = localStorage.getItem('mish-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateToggleIcon(saved);
+  })();
+</script>
+
+</body>
+</html>
